@@ -2,6 +2,8 @@ const connection = require('../config/connection');
 
 const { User, Thought } = require('../models');
 
+const { Schema, Types, model } = require("mongoose");
+
 const userData = [
     {
         username: 'Josh',
@@ -19,12 +21,24 @@ const userData = [
         username: 'Jan',
         email: 'jan@jan.com'
     },
+    {
+        username: 'Erik',
+        email: 'erik@erik.com'
+    },
+    {
+        username: 'Jordan',
+        email: 'jordan@jordan.com'
+    },
+    {
+        username: 'Steve',
+        email: 'steve@steve.com'
+    },
 ]
 
 const thoughtData = [
     {
         thoughtText: 'I think the sky is blue',
-        username: 'User1'
+        username: 'User1',
     },
     {
         thoughtText: 'I think thoughts are cool',
@@ -38,24 +52,55 @@ const thoughtData = [
         thoughtText: 'I think aliens are real',
         username: 'User4'
     },
+    {
+        thoughtText: 'The ocean is so big',
+        username: 'User5'
+    },
+    {
+        thoughtText: 'There are probably over 400 grains of sand',
+        username: 'User6'
+    },
+    {
+        thoughtText: 'Birds are just government drones',
+        username: 'User7'
+    },
 ]
 
 const reactionData = [
     {
         reactionBody: 'Wow that is crazy',
-        username: 'Thompson'
+        username: 'Thompson',
+        reactionId: new Types.ObjectId()
     },
     {
         reactionBody: 'Holy moly!',
-        username: 'Jackson'
+        username: 'Jackson',
+        reactionId: new Types.ObjectId()
     },
     {
         reactionBody: 'Yowzaaa',
-        username: 'Marcus'
+        username: 'Marcus',
+        reactionId: new Types.ObjectId()
     },
     {
         reactionBody: 'I totally agree',
-        username: 'Jacob'
+        username: 'Jacob',
+        reactionId: new Types.ObjectId()
+    },
+    {
+        reactionBody: 'Pshh get outta here!!',
+        username: 'Marshall',
+        reactionId: new Types.ObjectId()
+    },
+    {
+        reactionBody: 'Only crazy people think thatr!',
+        username: 'Danielle',
+        reactionId: new Types.ObjectId()
+    },
+    {
+        reactionBody: 'That is a very astute observation',
+        username: 'Joshua',
+        reactionId: new Types.ObjectId()
     },
 ]
 
